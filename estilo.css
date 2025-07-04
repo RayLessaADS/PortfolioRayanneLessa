@@ -1,0 +1,756 @@
+/* Importa a fonte Pixelify Sans */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* Reset inicial */
+body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, form, label, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo da página */
+body {
+    font-family: 'Pixelify Sans', cursive;
+    color: #333;
+    background-image: url('./Images/background city.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-attachment: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Estilização da "janela flutuante" principal */
+.janela-principal {
+    background-color: #FCC6FF;
+    border: 3px solid #FFB4A2;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px 0px #E5989B;
+    width: 95%;
+    max-width: 1200px;
+    height: auto;
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    margin: auto;
+}
+
+/* Estilização para o cabeçalho da janela */
+.cabecalho-janela {
+    background-color: #FFB4A2;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #E5989B;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #B5828C;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFCDB2;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.icone-titulo-janela {
+    font-size: 1.2em;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icone-titulo-janela img {
+    height: 32px;
+    width: auto;
+    image-rendering: pixelated;
+}
+
+.titulo-janela {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.controles-janela {
+    display: flex;
+    gap: 5px;
+}
+.botao-controle-janela {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0px 0px #8B636B;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.botao-controle-janela:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0px 0px #8B636B;
+}
+
+/* Wrapper para o conteúdo interno da janela*/
+.conteudo-janela-wrapper {
+    display: flex;
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+/* Estilização para a coluna da personagem (lateral esquerda) */
+.area-personagem {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 20px;
+    border-right: 1px solid #E5989B;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 20px;
+    overflow-y: visible;
+}
+
+/* Estilização para a imagem da personagem (APENAS na página principal) */
+.imagem-personagem {
+    max-width: 60%;
+    height: auto;
+    image-rendering: pixelated;
+    margin-top: 10px;
+}
+
+/* Estilização para o nome e descrições (APENAS na página principal) */
+body.pagina-principal .nome-principal {
+    font-size: 2em;
+    color: #B5828C;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px #FFE6C9;
+}
+
+body.pagina-principal .descricao-funcao-futura {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+/* Estilização para a área de conteúdo principal */
+.area-conteudo {
+    flex: 1;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Alinhamento para títulos e parágrafos dentro de area-conteudo */
+.area-conteudo h1,
+.area-conteudo h2,
+.area-conteudo h3,
+.area-conteudo p,
+.area-conteudo ul,
+.area-conteudo ol {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.area-conteudo h1 {
+    font-size: 2em;
+    color: #B5828C;
+    text-shadow: 2px 2px #FFCDB2;
+    margin-bottom: 20px;
+}
+
+.area-conteudo h2 {
+    font-size: 1.6em;
+    color: #E5989B;
+    text-shadow: 1px 1px #FFCDB2;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.area-conteudo h3 {
+    font-size: 1.3em;
+    color: #B5828C;
+    margin-bottom: 10px;
+}
+
+.area-conteudo ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.area-conteudo ul li {
+    margin-bottom: 5px;
+}
+
+.citacao-impacto {
+    font-size: 2.5em;
+    color: #E5989B;
+    text-shadow: 3px 3px 0px #FFCDB2;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    line-height: 1.2;
+    padding: 10px 20px;
+    border: 2px dashed #FFB4A2;
+    border-radius: 10px;
+    background-color: rgba(255, 205, 178, 0.3);
+}
+
+/* Estilização para a coluna do menu */
+.area-menu {
+    flex: 0 0 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 20px;
+    border-left: 1px solid #E5989B;
+    box-sizing: border-box;
+    overflow-y: visible;
+}
+
+/* Estilização para os botões do menu */
+.botao-menu {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #B5828C;
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 150px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.botao-menu span {
+    display: none;
+}
+
+.botao-menu img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    box-shadow: 4px 4px 0px 0px #E5989B;
+    border-radius: 8px;
+}
+
+.botao-menu:hover img {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #E5989B;
+}
+
+.botao-menu:active img {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px #E5989B;
+}
+
+/* Estilização para Redes Sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+}
+.icone-social {
+    display: block;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.icone-social img {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px 0px #B5828C;
+    background-color: #FFCDB2;
+    padding: 5px;
+}
+
+.icone-social:hover img {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0px 0px #B5828C;
+}
+
+.icone-social:active img {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px 0px #B5828C;
+}
+
+/* Estilização para as outras páginas (personagem menor, sem nome/descrição) --- */
+body:not(.pagina-principal) .area-personagem {
+    flex: 0 0 150px;
+    padding-top: 50px;
+}
+
+body:not(.pagina-principal) .imagem-personagem {
+    max-width: 100px;
+    margin-top: 0;
+}
+
+body:not(.pagina-principal) .nome-principal,
+body:not(.pagina-principal) .descricao-funcao,
+body:not(.pagina-principal) .descricao-funcao-futura {
+    display: none;
+}
+
+/* Estilização para formação */
+.secao-formacao, .secao-idiomas {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.item-formacao {
+    background-color: #FFE6C9;
+    border: 2px solid #FFC785;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 0px 0px #FFA09B;
+}
+
+.item-formacao h3 {
+    color: #B5828C;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+    text-shadow: 1px 1px #FFCDB2;
+}
+
+.item-formacao p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Estilização para o Formulário de Contato */
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFE6C9;
+    border: 2px solid #FFC785;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px 0px #FFA09B;
+}
+
+.formulario-contato label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #B5828C;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="tel"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #FFB4A2;
+    border-radius: 5px;
+    background-color: #FFCDB2;
+    color: #555;
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 1em;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.formulario-contato input:focus,
+
+.formulario-contato textarea:focus {
+    border-color: #B5828C;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3), 0 0 5px #B5828C;
+}
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+.formulario-contato button[type="submit"] {
+    background-color: #B5828C;
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid #8B636B;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Pixelify Sans', cursive;
+    box-shadow: 4px 4px 0px 0px #E5989B;
+    transition: all 0.1s ease;
+    align-self: center;
+    width: 150px;
+}
+
+.formulario-contato button[type="submit"]:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #E5989B;
+    background-color: #A06E75;
+}
+
+.formulario-contato button[type="submit"]:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px #E5989B;
+    background-color: #8B636B;
+}
+
+/* Estilização página XP (Experiência) */
+.secao-xp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linguagem-xp {
+    background-color: #FFE6C9;
+    border: 2px solid #FFC785;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 5px 5px 0px 0px #FFA09B;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.linguagem-xp img {
+    width: 60px;
+    height: 60px;
+    image-rendering: pixelated;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px #FFB4A2;
+}
+
+.container-progresso {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fundo-barra-progresso {
+    width: 100%;
+    height: 20px;
+    background-color: #B5828C;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #8B636B;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.preenchimento-barra-progresso {
+    height: 100%;
+    background-color: #FFCDB2;
+    border-radius: 8px;
+    transition: width 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.porcentagem-progresso {
+    color: #B5828C;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-shadow: 1px 1px #FFE6C9;
+}
+
+/* Estilização para Projetos */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cartao-projeto {
+    background-color: #FFE6C9;
+    border: 2px solid #FFC785;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px 0px #FFA09B;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.cartao-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    image-rendering: pixelated;
+    border-bottom: 2px solid #FFB4A2;
+}
+
+.cartao-projeto h3 {
+    color: #B5828C;
+    margin: 15px 10px;
+    font-size: 1.4em;
+    text-shadow: 1px 1px #FFCDB2;
+}
+
+.cartao-projeto .detalhes-projeto {
+    padding: 0 15px 15px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+
+.cartao-projeto .detalhes-projeto .lista-tecnologias {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cartao-projeto .detalhes-projeto .lista-tecnologias li {
+    background-color: #FFCDB2;
+    padding: 5px 8px;
+    margin: 3px;
+    border-radius: 3px;
+    border: 1px solid #FFB4A2;
+    color: #B5828C;
+    font-size: 0.8em;
+    box-shadow: 1px 1px 0px 0px #FFB4A2;
+}
+
+/* Botão XP na página de projetos */
+.container-botao-xp {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.botao-xp {
+    background-color: #FB9EC6;
+    border: 2px solid #B5828C;
+    border-radius: 10px;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 5px 5px 0px 0px #B5828C;
+    transition: all 0.1s ease;
+    display: inline-block;
+}
+
+.botao-xp:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px 0px #B5828C;
+    background-color: #FFE6C9;
+}
+
+.botao-xp:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px #E5989B;
+    background-color: #FFCDB2;
+}
+
+/* --- Estilização rodapé --- */
+.rodape {
+    background-color: #FFB4A2;
+    padding: 10px 15px;
+    border-top: 2px solid #E5989B;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: #B5828C;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFCDB2;
+    text-align: center;
+    font-size: 0.8em;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.rodape p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* --- Responsividade --- */
+/* Para telas menores (ex: tablets e celulares) */
+@media (max-width: 900px) {
+.janela-principal {
+    flex-direction: column;
+    height: auto;
+    width: 98%;
+    max-width: none;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px #B5828C;
+    margin: 10px auto;
+}
+.cabecalho-janela {
+    border-radius: 7px 7px 0 0;
+    padding: 8px 10px;
+    font-size: 0.9em;
+}
+.botao-controle-janela {
+    width: 20px;
+    height: 20px;
+}
+.conteudo-janela-wrapper {
+    flex-direction: column;
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.area-personagem {
+    flex: none;
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #E5989B;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    order: 1;
+    padding-top: 0;
+    overflow-y: visible;
+}
+/* Esconde o nome e descrições em telas pequenas, mesmo na página principal */
+.nome-principal, .descricao-funcao-futura {
+display: none;
+}
+.imagem-personagem {
+    max-width: 150px;
+    margin-top: 0;
+}
+.redes-sociais {
+    margin-top: 20px;
+    gap: 10px;
+}
+.icone-social img {
+    width: 40px;
+    height: 40px;
+}
+.area-menu {
+    flex: none;
+    width: 100%;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #E5989B;
+    padding-top: 20px;
+    margin-top: 20px;
+    align-items: center;
+    order: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: visible;
+}
+.botao-menu {
+    width: auto;
+    margin: 5px 10px;
+}
+.botao-menu span {
+    display: none;
+}
+.area-conteudo {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+    order: 2;
+}
+.citacao-impacto {
+    font-size: 1.8em;
+    padding: 10px;
+}
+.formulario-contato {
+    width: 95%;
+    padding: 15px;
+}
+.linguagem-xp img {
+    width: 40px;
+    height: 40px;
+}
+.fundo-barra-progresso {
+    height: 15px;
+}
+.porcentagem-progresso {
+    font-size: 0.8em;
+}
+.grid-projetos {
+    grid-template-columns: 1fr;
+}
+.cartao-projeto {
+    height: auto;
+}
+.rodape {
+    font-size: 0.7em;
+    padding: 8px 10px;
+}
+}
+
+/* Para telas ainda menores (ex: celulares em retrato) */
+@media (max-width: 480px) {
+body {
+    padding: 5px;
+}
+.janela-principal {
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px 0px #B5828C;
+    margin: 5px auto;
+}
+.cabecalho-janela {
+padding: 5px 8px;
+}
+.botao-controle-janela {
+    width: 18px;
+    height: 18px;
+}
+.conteudo-janela-wrapper {
+    padding: 10px;
+}
+.botao-menu img {
+    width: 60px;
+}
+.citacao-impacto {
+    font-size: 1.5em;
+}
+}

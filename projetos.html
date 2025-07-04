@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Meu Portfólio - Projetos</title>
+    <link rel="icon" href="./Images/icone-removebg-preview.png">
+</head>
+<body>
+    <div class="janela-principal">
+        <!-- Cabeçalho da Janela -->
+        <div class="cabecalho-janela">
+            <span class="icone-titulo-janela">
+                <img src="./Images/icone-removebg-preview.png" alt="Logo RL">
+            </span>
+            <span class="titulo-janela">Portfólio Rayanne Lessa</span>
+            <div class="controles-janela">
+                <img src="./Images/pixil-frame-0 (4).png" alt="Dúvidas" class="botao-controle-janela">
+                <img src="./Images/pixil-frame-0 (3).png" alt="Fechar janela" class="botao-controle-janela">
+            </div>
+        </div>
+
+        <!-- Conteúdo da Janela (Wrapper para as 3 colunas) -->
+        <div class="conteudo-janela-wrapper">
+            <!-- Coluna da Personagem (apenas imagem, menor) -->
+            <div class="area-personagem">
+                <img src="./Images/WhatsApp_Image_2025-06-21_at_02.35.13-removebg-preview.png" alt="Minha Personagem Pixel Art" class="imagem-personagem">
+            </div>
+
+            <!-- Área de Conteúdo Central -->
+            <div class="area-conteudo">
+                <h1>Meus Projetos</h1>
+                <p>Aqui você encontrará alguns dos projetos que desenvolvi, mostrando minhas habilidades e a paixão por criar!</p>
+
+                <div class="grid-projetos">
+                    <!-- Cartão de Projeto 1 - Snake Game com Vídeo -->
+                    <a href="https://github.com/seu_usuario/seu_repositorio_do_jogo_snake" target="_blank" class="cartao-projeto">
+                        <video controls autoplay loop muted class="video-background">
+                            <source src="./Videos/Vídeo sem título ‐ Feito com o Clipchamp.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                        <h3>Snake Game em Python</h3>
+                        <div class="detalhes-projeto">
+                            <p>Jogo da cobrinha desenvolvido em Python, demonstrando lógica de programação e manipulação de console.</p>
+                            <ul class="lista-tecnologias">
+                                <li>Python</li>
+                                <li>Lógica de Programação</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Cartão de Projeto 2 - Habit Tracker -->
+                    <a href="https://raylessaads.github.io/habitTracker/" target="_blank" class="cartao-projeto">
+                        <img src="./Images/habit tracker.png" alt="Habit Tracker">
+                        <h3>Habit Tracker</h3>
+                        <div class="detalhes-projeto">
+                            <p>Um rastreador de hábitos responsivo criado com HTML, CSS e Javascript focado na experiência do usuário em diferentes dispositivos.</p>
+                            <ul class="lista-tecnologias">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>Responsividade</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Cartão de Projeto 3 - Calendário -->
+                    <a href="https://raylessaads.github.io/calendario/" target="_blank" class="cartao-projeto">
+                        <img src="./Images/calendario.png" alt="Calendário simples">
+                        <h3>Calendário anual</h3>
+                        <div class="detalhes-projeto">
+                            <p>Um protótipo de calendário para desenvolvimento de futuro projeto de aplicativo como Trabalho de conclusão de curso.</p>
+                            <ul class="lista-tecnologias">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Cartão de Projeto 4 - To Do List -->
+                    <a href="https://raylessaads.github.io/ToDoListApp/" target="_blank" class="cartao-projeto">
+                        <img src="./Images/ToDoListTasks.png" alt="To Do List">
+                        <h3>To Do List</h3>
+                        <div class="detalhes-projeto">
+                            <p>Um aplicativo de lista de tarefas interativo, desenvolvido para organizar e gerenciar atividades diárias.</p>
+                            <ul class="lista-tecnologias">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="container-botao-xp">
+                    <a href="xp.html" class="botao-xp">Minha Experiência (XP)</a>
+                </div>
+
+            </div>
+
+            <!-- Coluna do Menu de Navegação -->
+            <nav class="area-menu">
+                <a href="index.html" class="botao-menu">
+                    <img src="./Images/botaoInicio.png" alt="Início">
+                    <span>Início</span>
+                </a>
+                <a href="sobreMim.html" class="botao-menu">
+                    <img src="./Images/botaoSobreMim.png" alt="Sobre Mim">
+                    <span>Sobre Mim</span>
+                </a>
+                <a href="projetos.html" class="botao-menu">
+                    <img src="./Images/botaoProjetos.png" alt="Projetos">
+                    <span>Projetos</span>
+                </a>
+                <a href="formacao.html" class="botao-menu">
+                    <img src="./Images/botaoFormacao.png" alt="Formação">
+                    <span>Formação</span>
+                </a>
+                <a href="contato.html" class="botao-menu">
+                    <img src="./Images/botaoContato.png" alt="Contato">
+                    <span>Contato</span>
+                </a>
+            </nav>
+        </div>
+        <!-- Rodapé da Janela -->
+        <div class="rodape">
+            <p>Desenvolvido por Rayanne Lessa - 2025</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
